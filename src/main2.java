@@ -113,12 +113,14 @@ public class main2 {
                 if (i == slots[0]){
                     k[i] = (int) Math.abs(parseDouble(JOptionPane.showInputDialog("How many sides on your dice?")));
                 }
+
+
             }
 
 
 
         });
-        JButton slot1 = new JButton("slot2");
+        JButton slot1 = new JButton("slot1");
         slot1.setBounds(80,200,70,20);
         slot1.setVisible(true);
         slot1.setText("Slot 1");
@@ -138,81 +140,87 @@ public class main2 {
 
 
         });
+        int nr = 1;
         JButton slot2 = new JButton("slot2");
         slot2.setBounds(140,200,70,20);
         slot2.setVisible(true);
         slot2.setText("Slot 2");
         f.add(slot2);
         slot2.addActionListener(e -> {
-            if (k[2]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[2] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
             }
 
         });
+        int nr = 2;
         JButton slot3 = new JButton("slot3");
         slot3.setBounds(200,200,70,20);
         slot3.setVisible(true);
         slot3.setText("Slot 3");
         f.add(slot3);
         slot3.addActionListener(e -> {
-            if (k[3]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[3] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
             }
 
         });
+        int nr = 3;
         JButton slot4 = new JButton("slot4");
         slot4.setBounds(260,200,70,20);
         slot4.setVisible(true);
         slot4.setText("Slot 4");
         f.add(slot4);
         slot4.addActionListener(e -> {
-            if (k[4]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[4] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
             }
 
         });
+        int nr = 4;
         JButton slot5 = new JButton("slot5");
         slot5.setBounds(80,250,70,20);
         slot5.setVisible(true);
         slot5.setText("Slot 5");
         f.add(slot5);
         slot5.addActionListener(e -> {
-            if (k[5]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[5] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
             }
 
         });
+        int nr = 5;
         JButton slot6 = new JButton("slot6");
         slot6.setBounds(140,250,70,20);
         slot6.setVisible(true);
         slot6.setText("Slot 6");
         f.add(slot6);
         slot6.addActionListener(e -> {
-            if (k[6]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[6] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
 
             }
         });
+        int nr = 6;
         JButton slot7 = new JButton("slot7");
         slot7.setBounds(200,250,70,20);
         slot7.setVisible(true);
@@ -220,25 +228,26 @@ public class main2 {
             slot7.setText("Slot 7");}
         f.add(slot7);
         slot7.addActionListener(e -> {
-            if (k[7]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[7] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
             }
         });
+        int nr = 7;
         JButton slot8 = new JButton("Slot8");
         slot8.setBounds(260,250,70,20);
         slot8.setVisible(true);
         slot8.setText("Slot 8");
         f.add(slot8);
         slot8.addActionListener(e -> {
-            if (k[8]==0){
+            if (k[nr]==0){
                 tf.setText("This slot is empty");
             }
             else {
-                roll[0] = (int) Math.floor(Math.random() * (k[8] - 1 + 1) + 1);
+                roll[0] = (int) Math.floor(Math.random() * (k[nr] - 1 + 1) + 1);
                 tf.setText("You rolled a " + roll[0]);
             }
 
