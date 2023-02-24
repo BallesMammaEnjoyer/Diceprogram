@@ -1,15 +1,16 @@
 import javax.swing.*;
+import java.awt.*;
 import static java.lang.Double.parseDouble;
 import static java.lang.Double.sum;
 import static javax.swing.JOptionPane.showInputDialog;
 
-public class main2 {
+public class Uppgift {
 
     public static void main(String[] args) {
         final int[] roll = new int[1];
-        final int[] slots = new int[1];
+        final int[] slots = new int[
+1];
         int[] k = new int[8];
-
 
 
 
@@ -22,8 +23,10 @@ public class main2 {
         b.setBounds(140, 100, 60, 20);
 
         b.addActionListener(e -> {
+            Graphics g = null;
             roll[0] = (int) Math.floor(Math.random() * (4 - 1 + 1) + 1);
             tf.setText("You rolled a " + roll[0]);
+            g.drawString("mongus",500,20);
 
 
         });
@@ -155,7 +158,6 @@ public class main2 {
             }
 
         });
-
         JButton slot3 = new JButton("slot3");
         slot3.setBounds(200,200,70,20);
         slot3.setVisible(true);
@@ -171,7 +173,6 @@ public class main2 {
             }
 
         });
-
         JButton slot4 = new JButton("slot4");
         slot4.setBounds(260,200,70,20);
         slot4.setVisible(true);
@@ -221,7 +222,7 @@ public class main2 {
         JButton slot7 = new JButton("slot7");
         slot7.setBounds(200,250,70,20);
         slot7.setVisible(true);
-        if (k[6] == 0){
+        if (k[7] == 0){
             slot7.setText("Slot 7");}
         f.add(slot7);
         slot7.addActionListener(e -> {
@@ -468,7 +469,7 @@ public class main2 {
                     }
                     df.setText("Sum is " + summa[0]);
                 }
-                });
+            });
 
 
 

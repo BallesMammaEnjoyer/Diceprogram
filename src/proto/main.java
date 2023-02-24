@@ -1,3 +1,5 @@
+package proto;
+
 import javax.swing.*;
 class main {
     public static void main(String[] args) {

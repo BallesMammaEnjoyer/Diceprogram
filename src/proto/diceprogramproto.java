@@ -1,3 +1,5 @@
+package proto;
+
 import java.awt.event.*;
 import javax.swing.*;
 public class diceprogramproto {
