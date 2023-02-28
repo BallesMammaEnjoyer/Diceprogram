@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferStrategy;
+import static java.lang.Double.parseDouble;
+import static java.lang.Double.sum;
+import static javax.swing.JOptionPane.showInputDialog;
 
 public class Template extends Canvas implements Runnable{
     private BufferStrategy bs;
@@ -12,6 +15,7 @@ public class Template extends Canvas implements Runnable{
     public Template() {
         setSize(600,400);
         JFrame frame = new JFrame();
+        final JTextField tf = new JTextField();
         frame.add(this);
         frame.addKeyListener(new MyKeyListener());
         this.addMouseMotionListener(new MyMouseMotionListener());
@@ -22,26 +26,27 @@ public class Template extends Canvas implements Runnable{
         frame.setVisible(true);
     }
 
-    public void render() {
-        bs = getBufferStrategy();
-        if (bs == null) {
-            createBufferStrategy(3);
-            return;
-        }
-        Graphics g = bs.getDrawGraphics();
-
-        // Rita ut den nya bilden
-        draw(g);
-
-        g.dispose();
-        bs.show();
-    }
 
     public void draw(Graphics g) {
         g.clearRect(0,0,getWidth(),getHeight());
+        g.drawString("5",100,100);
+
+        JButton v = new JButton("D6");
+        v.setBounds(200,100,60,20);
+        v.setVisible(true);
+        v.setText("d6");
+        frame.add(v);
+        v.addActionListener(e -> {
+            roll[0] = (int) Math.floor(Math.random() * (6- 1 + 1) + 1);
+            tf.setText("You rolled a " + roll[0]);
+
+        });
+
     }
 
     private void update() {
+
+
     }
 
     public static void main(String[] args) {

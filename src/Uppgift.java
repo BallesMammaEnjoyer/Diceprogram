@@ -8,8 +8,7 @@ public class Uppgift {
 
     public static void main(String[] args) {
         final int[] roll = new int[1];
-        final int[] slots = new int[
-1];
+        final int[] slots = new int[1];
         int[] k = new int[8];
 
 
@@ -26,7 +25,7 @@ public class Uppgift {
             Graphics g = null;
             roll[0] = (int) Math.floor(Math.random() * (4 - 1 + 1) + 1);
             tf.setText("You rolled a " + roll[0]);
-            g.drawString("mongus",500,20);
+
 
 
         });
